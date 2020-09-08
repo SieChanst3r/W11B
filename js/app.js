@@ -43,7 +43,7 @@ function getGiphy() {
             let giphy = JSON.parse(this.responseText);
 
             // I believe this object that you have called giphy does not have a "giphy" key. I'm pretty sure the key is called "url" meaning you should have giphy.url
-            document.getElementById("giphy").respone = giphy.URL;
+            document.getElementById("giphy").setAttribute("src", giphy.url);
             // But also, I'mprety sure you don't want the url to be the innerHTML. We did an example on how to set an attribute on a tag before
 
         } else if (this.readyState != 4) {
